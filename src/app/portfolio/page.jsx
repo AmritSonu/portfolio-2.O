@@ -42,9 +42,9 @@ const PortfolioPage = () => {
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden bg-gradient-to-r from-purple-200 to-red-200">
+        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden bg-gray-800">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
+            <div className="h-screen w-screen flex items-center justify-center bg-gray-800" />
             {items.map((item) => (
               <div
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color} `}
@@ -52,12 +52,13 @@ const PortfolioPage = () => {
               >
                 <div className="flex flex-col gap-2 items-start text-white py-28 ">
                   <div className="w-80 h-20 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt={item.title} />
+                    <Link href={item.link}>
+                      <Image src={item.img} alt={item.title} />
+                    </Link>
                   </div>
-                  <h1 className="text-xl font-bold xl:text-4xl">
+                  <h1 className="text-2xl my-2 font-bold xl:text-4xl text-black mt-24 sm:mt-0">
                     {item.title}
                   </h1>
-
                   <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px] font-semibold">
                     {item.desc}
                   </p>
@@ -89,7 +90,7 @@ const PortfolioPage = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
+                Fullstack Developer
               </textPath>
             </text>
           </motion.svg>
