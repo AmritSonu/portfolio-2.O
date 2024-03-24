@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import webapp from "../../../public/blogweb-app.png";
 import movieapp from "../../../public/movie-app.png";
+import petxApp from "../../../public/petxApp.png";
 
 const items = [
   {
@@ -22,6 +23,14 @@ const items = [
     desc: "Implemented features like movie search functionality, total movie count display, star ratings for each movie,lazy loading for optimized performance, and user-centric functionalities like adding movies to a watched list.",
     img: movieapp,
     link: "https://moviecorn6.netlify.app",
+  },
+  {
+    id: 3,
+    color: "from-blue-300 to-violet-300",
+    title: "Pets servicing app",
+    desc: "Book pet services like boarding, meals, and more with ease. Our app offers responsive design, a fixed navigation bar, captivating animations, efficient form management, and comprehensive pet care features.",
+    img: petxApp,
+    link: "https://petx6.netlify.app",
   },
 ];
 
